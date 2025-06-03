@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uku store</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #127acf;
+    color: #2c3e50;
+    font-weight: 600;
+  }
+  p {
+    color: #ffffff;
+  }
+  span {
+    color: #f82e8f;
+  }
+  span:hover {
+    color: #ffffff;
+  }
+  
+  header {
+    background-color: #2c3e50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  .logo:hover {
+    color: #d4066a;
+  }
+  
+  nav a {
+    text-align: center;
+    margin-left: 20px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-weight: 600;
+  }
+  
+  nav a:hover {
+    color: #d4066a;
+  }
+  .first {
+    max-width: 300px;
+
+
+  }
+  .home {
+    display: block;
+  }
+  .gif {
+    max-width: 300px;
+    margin-left: 10px;
+    margin-top: 150px;
+  }
+  .home {
+    margin-top: -400px;
+  }
+  .home img {
+    margin-left: 800px;
+
+  }
+  .home-text {
+    margin-top: -300px;
+    margin-left: 300px;
+    font-size: larger;
+  }
+  .home-a {
+    display: inline-block;
+    padding: 12px 16px;
+    background-color: #d4066a;
+    color: #fff;
+    border-radius: 55px;
+    transition: 300ms;
+  }
+  .home-a:hover {
+    background-color: #90E0EF;
+   color: white;
+  }
+  .type-text {
+    margin-top: 160px;
+    margin-left: 45%;
+  }
+  .type-text:hover {
+    color: #d4066a;
+  }
+  .right-side {
+    width: 100%;
+    flex: 2;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+.icon {
+    font-size: 40px;
+}
+.card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+  
+}
+.shop-text {
+    text-align: center;
+}
+.card p {
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+}
+.card {
+    margin: 30px;
+    background: #d4066a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0, 1, 0.5, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.card img {
+    max-width: 260px;
+}
+.video-text {
+  color: #2c3e50;
+  font-size: larger;
+  margin-left: 150px;
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+.video-v {
+  margin-left: 700px;
+  margin-top: -350px;
+}
+.shop {
+  margin-top: 50px;
+}
+.car-container {
+   display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  justify-items: center;
+  text-align: center;
+  border-radius: 30px;
+  
+  }
+  .hidden {
+    display: none;
+}
+  .car {
+  background-color: #f82e8f;
+   width: 100%;
+  max-width: 280px;
+  min-height: 400px;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 30px;
+  }
+  
+  .car:hover {
+    transform: translateY(-5px);
+  }
+  
+  .car img {
+    height: 180px;
+    object-fit: cover;
+    max-width: 150px;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .car h3 {
+    margin: 15px 0 10px;
+    font-size: 18px;
+  }
+  
+  .car p {
+    font-size: 14px;
+    padding: 0 10px;
+    color: #ffffff;
+  }
+  
+  .car button {
+    margin: 15px 0 20px;
+    padding: 8px 16px;
+    background-color: #ffb347;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  
+  .car button:hover {
+    background-color: #ff9933;
+  }
+
+  .form {
+    text-align: center;
+  }
+  .form-text h3 {
+    font-size: xx-large;
+  }
+  .form input {
+    padding: 15px 10px;
+    border-radius: 30px;
+    margin-top: 5px;
+  }
+  .send {
+    display: inline-block;
+    padding: 2px 16px;
+    background-color: #d4066a;
+    color: #fff;
+    border-radius: 55px;
+    transition: 300ms;
+    margin-top: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  .send:hover {
+    background-color: #90E0EF;
+  }
+  .testimonials {
+  background-color: #2c3e50;
+  padding: 40px 20px;
+  text-align: center;
+  color: #fff;
+  margin-top: 80px;
+  border-radius: 30px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  margin-bottom: 30px;
+}
+
+.testimonials h2 {
+  font-size: 28px;
+  color: #ffd700;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px #000;
+}
+
+.testimonial-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.testimonial {
+  background-color: #f82e8f;
+  color: white;
+  padding: 20px;
+  max-width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.testimonial:hover {
+  transform: scale(1.05);
+}
+
+.testimonial p {
+  font-style: italic;
+  font-size: 14px;
+}
+
+.testimonial h4 {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #ffe9f9;
+}
+  .site-footer {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 20px 10px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+
+  .site-footer h3 {
+    margin: 0;
+    font-size: 20px;
+  }
+
+  .site-footer p {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+
+  .socials {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .socials li a {
+    color: #ffd700;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .socials li a:hover {
+    text-decoration: underline;
+  }
+
+  .copyright {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #ccc;
+  }
+.input-t {
+  padding: 5px 56px;
+  border-radius: 20px;
+}
+  @media (max-width: 600px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .home img {
+      margin: 0 auto;
+      display: block;
+      width: 100%;
+      max-width: 300px;
+    }
+  
+    .home-text {
+      margin: 20px;
+      text-align: center;
+    }
+  
+    .video-v {
+      width: 100%;
+      margin: 0 auto;
+      display: block;
+    }
+  
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .car-container {
+      grid-template-columns: 1fr;
+    }
+  
+  }
+  
+
+  @media (min-width: 601px) and (max-width: 1024px) {
+    .home img {
+      margin-left: 400px;
+      max-width: 350px;
+    }
+  
+    .home-text {
+      margin-top: -200px;
+      margin-left: 100px;
+    }
+  
+    .video-v {
+      margin-left: 200px;
+      width: 80%;
+    }
+  
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .car-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+  }
+.expand-btn {
+  margin-left: 725px;
+  padding: 5px 6px;
+  border-radius: 30px;
+}
+.expand-btn:hover {
+  background-color: #90E0EF;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0; top: 0;
+  width: 100%;
+   height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+  color: #2c3e50;
+}
+.modal-content p {
+  color: #3680c9;
+}
+
+.close {
+  color: #000000;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: rgb(255, 0, 0);
+}
+.m-btn {
+  padding: 5px 6px ;
+  border-radius: 30px;
+  color: #fff;
+  background-color: #f73f3f;
+}
+.m-btn:hover {
+  background-color: #127acf;
+}
+</style>
+<body>
+    <header>
+        <a href="#" class="logo">Aloha-Uku</a>
+        <nav>
+        <a href="#">Home</a>
+        <a href="#">Type</a>
+        <a href="#">Shop</a>
+        <a href="#">Contact</a>
+        </nav>
+        
+<button id="openModal" class="m-btn">Discount!</button>
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <span><strong>Want 5% off?</strong><br></span>
+    <p>
+    Subscribe to our inst and receive a discount coupon! <br>
+    No spum - just Uku, lessons, and special offers  :) <br>
+   (Inst account in the footer site)
+   </p>
+   <img src="./images/mem.jpg" alt="">
+  </div>
+</div>
+    </header>
+    <img class="gif" src="./images/source.gif" alt="">
+    <section class="home">
+      
+        <img src="./images/aloha.png" alt="">
+        <div class="home-text">
+        <h1>Uku store-ALOHA.</h1>
+        <p>We love ukulele and want to share this <span>love</span> with you! <br>
+         Our store has only proven <span> instruments</span>, friendly <br>
+          service and a warm <span>atmosphere </span>for everyone who <br>
+          wants to play <span>music</span> with their heart.</p>
+          <a href="https://ru.wikipedia.org/wiki/%D0%A3%D0%BA%D1%83%D0%BB%D0%B5%D0%BB%D0%B5" class="home-a">Learn more ></a>
+         
+        </div>
+    </section>
+    <section class="types">
+        <div class="type-text">
+            <h2>Ukulele types!</h2>
+
+        </div>
+        <div class="right-side">
+            <div class="grid">
+        <div class="card">
+            <img src="./images/soprano.png" alt="" class="icon">
+            <h3>Soprano</h3>
+            <p>Soprano – the smallest ukulele, about 21 inches long, with a bright and cheerful sound</p>
+        </div>
+        <div class="card">
+            <img src="./images/concert.webp" alt="" class="icon">
+            <h3>Concert</h3>
+            <p>Concert is slightly larger than the soprano – around 23 inches, louder and more comfortable for adults to play.</p>
+        </div>
+        <div class="card">
+            <img src="./images/tenor.png" alt="" class="icon">
+            <h3>Tenor</h3>
+            <p>Tenor measures about 26 inches, offering a deeper and richer tone.</p>
+        </div>
+        <div class="card">
+            <img src="./images/bariton.png" alt="" class="icon">
+            <h3>Bariton</h3>
+            <p>Baritone is the largest ukulele, around 30 inches long, with a warm sound similar to a guitar.</p>
+        </div>
+    </div>
+    </div>
+    </section>
+    <section class="video">
+    <div class="video-text">
+      <h1>4 strings - 100% fun!</h1>
+      <p>Watch the video - who knows , maybe the <br>
+         ukulele will fall in love with you first!</p>
+    </div>
+    <iframe class="video-v" width="560" height="315" src="https://www.youtube.com/embed/4pKDHuBVCfE?si=rJwUpyIdot81gqMl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section>
+    <section class="shop">
+        <div class="shop-text">
+            <h2>Assortment <br>
+                    | <br>
+                    |
+            </h2>
+
+        </div>
+        <div class="car-container">
+            <div class="car">
+              <img src="./images/soprano.png" alt="Soprano Ukulele">
+              <h3>Soprano Ukulele</h3>
+              <p>Compact and lightweight, perfect for beginners.</p>
+              <p>53$</p>
+              <p>Code:7777</p>
+              <button>Learn More-></button>
+            </div>
+        
+            <div class="car">
+              <img src="./images/concert.webp" alt="Concert Ukulele">
+              <h3>Concert Ukulele</h3>
+              <p>Ideal for a deeper and richer sound. Musicians advice.</p>
+              <p>69$</p>
+              <p>Code:2567</p>
+              <button>Learn More-></button>
+            </div>
+        
+            <div class="car">
+              <img src="./images/tenor.png" alt="Tenor Ukulele">
+              <h3>Tenor Ukulele</h3>
+              <p>Great for those who want more volume and power.</p>
+              <p>99$</p>
+              <p>Code:1688</p>
+              <button>Learn More-></button>
+            </div>
+        
+            <div class="car">
+              <img src="./images/bariton.png" alt="Baritone Ukulele">
+              <h3>Baritone Ukulele</h3>
+              <p>Warm, deep tone — similar to a guitar.</p>
+              <p>123$</p>
+              <p>Code:6996</p>
+              <button>Learn More-></button>
+            </div>
+        
+            <div class="car">
+              <img src="./images/electra.png" alt="Electric Ukulele">
+              <h3>Electric Ukulele</h3>
+              <p>Perfect for stage and recording with plug-in option.</p>
+              <p>253$</p>
+              <p>Code:1488</p>
+              <button>Learn More-></button>
+            </div>
+        
+            <div class="car">
+              <img src="./images/kids.png" alt="Kids Ukulele">
+              <h3>Kids Ukulele</h3>
+              <p>Fun, colorful, and easy to play for little hands.</p>
+              <p>100$</p>
+              <p>Code:5253</p>
+              <button>Learn More-></button>
+            </div>
+
+            <div class="car expandable hidden ">
+              <img src="./images/mediatr.webp" alt="Kids Ukulele">
+              <h3>Ukulele Pick</h3>
+              <p>For precise and easy strumming.Available in different sizes</p>
+              <p>23$</p>
+              <p>Code:5253</p>
+              <button>Learn More-></button>
+               </div>
+              <div class="car expandable hidden">
+              <img src="./images/капдастр 2.png" alt="Kids Ukulele">
+              <h3>Capodaster</h3>
+              <p>Quickly changes the pitch of your ukulele without retuning.</p>
+              <p>31$</p>
+              <p>Code:5253</p>
+              <button>Learn More-></button>
+             </div>
+              <div class=" car expandable hidden ">
+              <img src="./images/ремень.png" alt="Kids Ukulele">
+              <h3>Strap for Ukulele</h3>
+              <p>Keeps your ukulele secure and comfortable while playing.</p>
+              <p>15$</p>
+              <p>Code:5253</p>
+              <button>Learn More-></button>
+              </div>
+               <div class=" car expandable hidden ">
+              <img src="./images/chehol.png" alt="Kids Ukulele">
+              <h3>Cover for Ukulele</h3>
+              <p>The case gently protects the ukulele both on the go and at rest.</p>
+              <p>10$</p>
+              <p>Code:1083</p>
+              <button>Learn More-></button>
+              </div>
+               <div class=" car expandable hidden ">
+              <img src="./images/чехол1.png" alt="Kids Ukulele">
+              <h3>Cover for Ukulele</h3>
+              <p>The case gently protects the ukulele both on the go and at rest.</p>
+              <p>21$</p>
+              <p>Code:0963</p>
+              <button>Learn More-></button>
+              </div>
+               <div class=" car expandable hidden ">
+              <img src="./images/чехол.jpg" alt="Kids Ukulele">
+              <h3>Cover for Ukulele</h3>
+              <p>The case gently protects the ukulele both on the go and at rest.</p>
+              <p>35$</p>
+              <p>Code:7345</p>
+              <button>Learn More-></button>
+              </div>
+          </div>
+           <button class="expand-btn">See more</button>
+    </section>
+    <section class="form">
+      <div class="form-text">
+        <h3>To Order!!!</h3>
+        <p>You have to fill out the form, and choose the right ukulele for you.</p>
+      </div>
+      <form>
+      <input type="email" id="email" required placeholder="email..."><br>
+      <input type="text" id="address" required placeholder="address..."><br>
+      <input type="name" id="username" required placeholder="your name..."><br>
+      <input type="text" required placeholder="ukulele code..."><br>
+      <input type="submit"  value="send" class="send">
+      </form>
+    </section>
+    <section class="testimonials">
+  <h2>What our customers say !</h2>
+  <div class="testimonial-box">
+    <div class="testimonial">
+      <p>"I never thought four strings could bring so much joy! The Soprano Uku is my new best friend!"</p>
+      <h4>– Arnold, beginner musician</h4>
+    </div>
+    <div class="testimonial">
+      <p>"Great service, fast delivery, and awesome sound quality. My Concert Uku rocks!"</p>
+      <h4>– Jamal, stage performer</h4>
+    </div>
+    <div class="testimonial">
+      <p>"The kids’ ukulele is so colorful and cute – my daughter loves it!"</p>
+      <h4>– Sponge Bob, happy mom</h4>
+    </div>
+  </div>
+  <h2>Please leave a review !</h2>
+  <label for="testimonials">As a <span> gift </span>, a cover for the your Uku!</label> <br>
+  <input type="text" required placeholder="review..." class="input-t">
+  <input type="submit" value="send" class="send">
+</section>
+ <footer class="site-footer">
+      <div class="footer-content">
+        <h3>Aloha-Ukulele!</h3>
+        <p>Love of music begins with four strings.</p>
+        <ul class="socials">
+          <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+          <li><a href="https://youtube.com" target="_blank">YouTube</a></li>
+          <li><a href="mailto:info@ukulelelife.com">Post</a></li>
+        </ul>
+        <p class="copyright">&copy; 2025 Aloha-Ukulele .All rights reserved.</p>
+      </div>
+</footer>
+    
+</body>
+<script>
+  $(document).ready(function () {
+    let hiddenRow = $(".expandable");
+    $(".expand-btn").click(function () {
+        hiddenRow.toggleClass("hidden");
+        if (hiddenRow.is(":visible")) {
+            $(".expand-btn").html("close");
+        } else {
+            $(".expand-btn").html("see more");
+        }
+    });
+ });
+ $(document).ready(function(){
+  $("#openModal").click(function(){
+    $("#myModal").fadeIn();
+  });
+  $(".close").click(function(){
+    $("#myModal").fadeOut();
+  });
+  $(window).click(function(event){
+    if ($(event.target).is("#myModal")) {
+      $("#myModal").fadeOut();
+    }
+  });
+});
+
+</script>
+<script src="./scripts/jquery-3.6.0.min.js"></script>
+<script src="./scripts/main.js"></script>
+</html>
